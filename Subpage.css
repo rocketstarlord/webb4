@@ -1,0 +1,51 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.mdiv
+{
+	display: flex;
+	width: 100%;
+	
+}
+.imges
+{
+	width: 40%;
+	height: 100%;
+	position: fixed;
+	left: 0px;
+	margin-top: 50px;
+}
+.info
+{
+	width: 50%;
+	height: 100%;
+	margin-left: 750px;
+	margin-top: 100px;
+	
+
+}
+h1{
+	padding-top: 20px;
+	font-family: Algerian;
+}
+body{
+	background: linear-gradient(#edeffa,#e6e9fa);
+}
+.navbar
+{
+	background-color: whitesmoke;
+}
+
+.d-flex
+{
+	background: skyblue;
+	border-radius: 10px;
+}
+.nb 
+{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}

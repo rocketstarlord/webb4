@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="laptop.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&family=Montserrat:ital,wght@1,700&family=Noto+Sans+Chorasmian&family=Oswald:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        @keyframes slidy {
+            0% {
+                left: 0%;
+            }
+
+            20% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
+
+        body {
+            margin: 0;
+        }
+
+        div#slider {
+            overflow: hidden;
+        }
+
+        div#slider figure img {
+            width: 20%;
+            float: left;
+        }
+
+        div#slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            text-align: left;
+            font-size: 0;
+            animation: 30s slidy infinite;
+        }
+
+
+
+        .laps.card {
+            height: 500px;
+            box-shadow: 0 15px 30px 1px grey;
+            background: rgba(255, 255, 255, 0.90);
+        }
+
+        .laps {
+            height: 700px;
+            display: flex;
+            justify-content: space-around;
+
+
+
+        }
+
+        .card-text {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
+
+
+        /* body {
+            background: #DFC2F2;
+            background-image: linear-gradient(to right, #ffffb3, #ffe6e6);
+            background-attachment: fixed;
+            background-size: cover;
+
+        } */
+
+        #container {
+            box-shadow: 0 15px 30px 1px grey;
+            background: rgba(255, 255, 255, 0.90);
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 5em auto;
+            height: 350px;
+            width: 700px;
+
+
+        }
+
+
+
+        .product-details {
+            position: relative;
+            text-align: left;
+            overflow: hidden;
+            padding: 30px;
+            height: 100%;
+            float: left;
+            width: 40%;
+
+        }
+
+        #container .product-details h1 {
+            font-family: 'Bebas Neue', cursive;
+            display: inline-block;
+            position: relative;
+            font-size: 30px;
+            color: #344055;
+            margin: 0;
+
+        }
+
+        #container .product-details h1:before {
+            position: absolute;
+            content: '';
+            right: 0%;
+            top: 0%;
+            transform: translate(25px, -15px);
+            font-family: 'Bree Serif', serif;
+            display: inline-block;
+            background: #ffe6e6;
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 5px;
+            color: white;
+            margin: 0;
+            animation: chan-sh 6s ease infinite;
+
+        }
+
+
+
+
+
+
+        .hint-star {
+            display: inline-block;
+            margin-left: 0.5em;
+            color: gold;
+            width: 50%;
+        }
+
+
+        #container .product-details>p {
+            font-family: 'EB Garamond', serif;
+            text-align: center;
+            font-size: 18px;
+            color: #7d7d7d;
+
+        }
+
+        .control {
+            position: absolute;
+            bottom: 20%;
+            left: 22.8%;
+
+        }
+
+        .btn {
+
+            transform: translateY(0px);
+            transition: 0.3s linear;
+            background: #1a66ff;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            color: #eee;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .btn:hover {
+            transform: translateY(-6px);
+            background: #1a66ff;
+        }
+
+        .btn span {
+            font-family: 'Farsan', cursive;
+            transition: transform 0.3s;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 0;
+
+        }
+
+        .btn .price,
+        .shopping-cart {
+            background: #333;
+            border: 0;
+            margin: 0;
+        }
+
+        .btn .price {
+            transform: translateX(-10%);
+            padding-right: 15px;
+        }
+
+        .btn .shopping-cart {
+            transform: translateX(-100%);
+            position: absolute;
+            background: #333;
+            z-index: 1;
+            left: 0;
+            top: 0;
+        }
+
+        .btn .buy {
+            z-index: 3;
+            font-weight: bolder;
+        }
+
+        .btn:hover .price {
+            transform: translateX(-110%);
+        }
+
+        .btn:hover .shopping-cart {
+            transform: translateX(0%);
+        }
+
+
+
+        .product-image {
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            /* float: right; */
+            width: 45%;
+            display: inline-block;
+        }
+
+        #container img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .info {
+            background: rgba(27, 26, 26, 0.9);
+            font-family: 'Bree Serif', serif;
+            transition: all 0.3s ease-out;
+            transform: translateX(-100%);
+            position: absolute;
+            line-height: 1.8;
+            text-align: left;
+            font-size: 105%;
+            cursor: no-drop;
+            color: #FFF;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .info h2 {
+            text-align: center
+        }
+
+        .product-image:hover .info {
+            transform: translateX(0);
+        }
+
+        .info ul li {
+            transition: 0.3s ease;
+        }
+
+        .info ul li:hover {
+            transform: translateX(50px) scale(1.3);
+        }
+
+        .product-image:hover img {
+            transition: all 0.3s ease-out;
+        }
+
+        .product-image:hover img {
+            transform: scale(1.2, 1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar ">
+        <div class="container-fluid">
+            <h1 class="navbar-brand"><img
+                    src="https://cdn.freebiesupply.com/images/large/2x/hewlett-packard-logo-png-transparent.png" alt=""
+                    style="height: 50px; width: 50px;"></h1>
+            <div>
+                <input style="color: white;" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+                </input>
+
+            </div>
+            <div>
+                <input style="color: white;" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+                </input>
+
+            </div>
+            <div>
+                <input style="color: white;" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+                </input>
+
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/3081/3081986.png" height="30px"
+                style="margin-left: 0px; margin-right: 0px;"  >
+
+            <form class="d-flex">
+
+                <input type="button" value="Sign In"
+                    style="color: black;border: none; height:40px ; width: 80px;border-radius: 10px; font-family: 'Exo 2', sans-serif;font-weight: bold;"></input>
+                <!-- <button type="button" class="btn btn-light">Light</button> -->
+            </form>
+        </div>
+    </nav>
+    <!-- <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/"> -->
+    <div id="slider" style="height: 600px;">
+        <figure>
+            <img src="https://images.unsplash.com/photo-1556565681-67b9cd907d20?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt>
+            <img src="https://images.unsplash.com/photo-1584433305355-9cb73387fc61?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt>
+            <img src="https://images.unsplash.com/photo-1661961111247-e218f67d1cd2?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt>
+
+
+            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt>
+
+            <img src="https://images.unsplash.com/photo-1543270123-5b5c73132cdf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt>
+        </figure>
+    </div>
+    <div class="laps">
+
+        <div class="card" data-aos="fade-right" style="width: 18rem;height: 600px; box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81lK9ePIMtL._SL1500_.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+
+                <p class="card-text">HP OMEN Gaming Laptop</p>
+                <p class="card-text">₹2,77,900</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button onclick="firstlap()" class="btn">
+                    <span class="price">₹2,77,900</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+                <script>
+                    function firstlap() {
+                        open("Gaminglaptop.html");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left" style="width: 18rem;height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61WY0CYG09L._SL1300_.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP 255 G9 (15.6) Laptop PC</p>
+                <p class="card-text">₹64,099</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button onclick="secondlap()" class="btn">
+                    <span class="price">₹64,099</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+                <script>
+                    function secondlap() {
+                        open("hp250G10.html");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left" style="width: 18rem;height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81s1aHrFTgL._SL1500_.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP EliteBook Laptop PC</p>
+                <p class="card-text">₹155,989</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button onclick="thirdlap()" class="btn">
+                    <span class="price">₹155,989</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+                <script>
+                    function thirdlap() {
+                        open("HpEliteBook.html");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left" style="width: 18rem;height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71zyVyF40NL._SL1300_.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP ProBook Laptop PC</p>
+                <p class="card-text">₹59,406</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button onclick="fourthlap()" class="btn">
+                    <span class="price">₹59,406</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+                <script>
+                    function fourthlap() {
+                        open("hpProBook.html");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="laps">
+
+        <div class="card" data-aos="fade-right" style="width: 18rem; height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/I/81wl5P7kuAL.SL1500.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP Victus</p>
+                <p class="card-text">₹72,899</p>
+
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">HP Victus Gaming Laptop,12th Gen Intel Core
+                    i5-12450H,NVIDIA RTX 3050 GPU,15.6-inch (39.6 cm),</p>
+                <button class="btn">
+                    <span class="price">₹72,899</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-right" style="width: 18rem;height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/I/81WEzS0+4+L.SL1500.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP Omen</p>
+                <p class="card-text">₹84,899</p>
+
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button class="btn">
+                    <span class="price">₹84,899</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left" style="width: 18rem;height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/I/91jIGNgFu5L.SL1500.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP Pavilion 80 cm</p>
+                <p class="card-text">₹139,999</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button class="btn">
+                    <span class="price">₹139,999</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left" style="width: 18rem;height: 600px;box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);">
+            <img src="https://m.media-amazon.com/images/I/71rcF4bhnrL.SL1500.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">HP 150 Keyboard & Mouse </p>
+                <p class="card-text">₹849</p>
+                <p>⭐⭐⭐</p>
+                <p class="des" style="font-weight: 200; font-size: small;">USB Wireless Spill Resistance Keyboard and
+                    Mouse Set with 10m Working Range 2.4G Wireless Technology / 3 Years Warranty (4SC12PA), Black</p>
+                <button class="btn">
+                    <span class="price">₹849</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div id="container">
+
+        <div class="product-details">
+
+            <h1>CHRISTMAS TIME OFFER</h1>
+            <span class="hint-star star">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </span>
+
+            <p class="information">" Let's spread the joy , here is Christmas , the most awaited day of the
+                year.Christmas Tree is what one need the most. Here is the correct tree which will enhance your
+                Christmas.</p>
+
+
+
+            <div class="control">
+
+                <!-- <button class="btn">
+                    <span class="price">$250</span>
+                    <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="buy">Get now</span>
+                </button> -->
+
+            </div>
+
+        </div>
+
+        <div class="product-image">
+
+            <img src="https://images.unsplash.com/photo-1606830733744-0ad778449672?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNocmlzdG1hcyUyMHRyZWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="">
+
+
+            <div class="info">
+                <h2> Christmas Offer Discount</h2>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

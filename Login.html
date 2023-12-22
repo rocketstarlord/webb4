@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="Login.css">
+</head>
+<body bgcolor="lightgrey">
+<div class="mdiv" >
+	<div class="login">
+		
+			<form autocomplete="off">
+				
+					
+					<fieldset>
+						<h1 class="lg">Login</h1>
+					<br><br>
+					<input type="text" name="username" class="box" placeholder="username" id="un">
+					<br><br>
+					  
+					<br>
+					<input type="Password" name="Password" class="box" placeholder="Password" id="pwd">
+					<br><br><br>
+					<p>
+					<input type="checkbox" name="chb" value="Remember Me"><label class="lable">  Remember Me</label></p>
+					<br>
+					<input type="submit" name="login" value="Login" class="loginb" onclick="submitForm()">
+					<br>
+					<br>
+					<p><a href="#">Create an account</a></p>
+					<input type="button" name="create" value="Sign UP" class="signup">
+					<br>
+					<br>
+					</fieldset>
+				
+			</form>
+		</div>
+	</div>
+	<script>
+		 let un1="SAAP1234";
+    let pwd1="SAAP@1234";
+    function submitForm(){
+        let un2 = document.getElementById("un").value;
+        let pwd2 = document.getElementById("pwd").value;
+
+        if(un1==un2 && pwd1==pwd2){
+           open("gallery.html");
+        }
+        else{
+            alert("Incorrect Credentials!!");
+        }
+    }
+	</script>
+
+</body>
+</html>
